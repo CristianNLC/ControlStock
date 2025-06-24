@@ -1,0 +1,125 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+.topbar {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+}
+
+.topbar__logo {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.topbar__title {
+    flex-grow: 1;
+    font-size: 1.2rem;
+}
+
+.button {
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.button.highlight {
+    background-color: black;
+    color: white;
+}
+
+.ribbon {
+    background-color: #d3d3d3;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
+.ribbon__button {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 7px;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+.ribbon__button:hover {
+    background-color: #a9a8a8;
+}
+
+.ribbon__button__image-wrapper {
+    height: 60px;
+
+    img {
+        max-height: 50px;
+    }
+}
+
+.ribbon__button.active {
+    background-color: white;
+}
+
+main {
+    padding: 0 10px;
+}
+
+.toolbar {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border: solid 1px #d3d3d3;
+    border-collapse: separate;
+    border-radius: 7px;
+    border-spacing: 0;
+
+    thead {
+        background-color: #d3d3d3;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
+
+th {
+    text-align: left;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+th,
+td {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+tr {
+    td {
+        border-bottom: solid 1px #d3d3d3;
+    }
+}
+
+tr:last-child {
+    td {
+        border-bottom: none;
+    }
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 10px;
+}
