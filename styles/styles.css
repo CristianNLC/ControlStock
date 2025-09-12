@@ -54,6 +54,11 @@ html {
     padding: 7px;
     min-width: 100px;
     cursor: pointer;
+    color: black;
+}
+
+.no-decoration {
+    text-decoration: none;
 }
 
 .ribbon__button:hover {
