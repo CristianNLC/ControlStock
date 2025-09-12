@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nissi Creaciones</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,16 +16,15 @@
 <body>
     <?php
         include '../includes/header.php';
-
         mostrarRibbon("productos");
     ?>
 
     <main>
-        <div class="toolbar">
-            <div class="button highlight">
-                + Agregar producto
-            </div>
-        </div>
+    <div class="toolbar">
+    <a href="agregar.php" class="button highlight">
+        + Agregar producto
+    </a>
+</div>
 
         <table>
             <thead>
@@ -39,10 +38,10 @@
             <tbody>
                 <?php
                     // Datos de conexión
-                    $host = "wd.zaifo.com.ar";     // Servidor (normalmente localhost)
-                    $usuario = "root";       // Usuario de MySQL
-                    $clave = "admin1234";             // Contraseña de MySQL
-                    $baseDatos = "pp2025";  // Nombre de tu base de datos
+                    $host = "localhost";
+                    $usuario = "root";
+                    $clave = "";
+                    $baseDatos = "pp2025";
 
                     // Conexión a MySQL
                     $conexion = new mysqli($host, $usuario, $clave, $baseDatos);
@@ -53,7 +52,7 @@
                     }
 
                     // Consulta para obtener los productos
-                    $sql = "SELECT cod_procucto, nombre, precio FROM productos";
+                    $sql = "SELECT cod_producto, nombre, precio FROM productos";
                     $resultado = $conexion->query($sql);
 
                     // Mostrar resultados en una tabla HTML
@@ -67,12 +66,12 @@
                             echo "</tr>";
                         }
                     } else {
-                        echo "No se encontraron productos.";
+                        echo "<tr><td colspan='4'>No se encontraron productos.</td></tr>";
                     }
 
                     // Cerrar conexión
                     $conexion->close();
-                    ?>
+                ?>
             </tbody>
         </table>
     </main>

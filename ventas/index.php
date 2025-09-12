@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nissi Creaciones</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,11 +21,11 @@
     ?>
 
     <main>
-        <div class="toolbar">
-            <div class="button highlight">
-                + Agregar venta
-            </div>
-        </div>
+    <div class="toolbar">
+    <a href="agregar.php" class="button highlight">
+        + Agregar venta
+    </a>
+</div>
 
         <table>
             <thead>

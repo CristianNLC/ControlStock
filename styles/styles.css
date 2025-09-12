@@ -1,130 +1,281 @@
-body,
-html {
-    padding: 0;
+/* ===== ESTILOS GENERALES ===== */
+* {
     margin: 0;
-    font-family: Inter, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body,
+html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7f9;
+    color: #333;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ===== TOPBAR ===== */
 .topbar {
     display: flex;
-    gap: 10px;
-    padding: 5px;
+    gap: 15px;
+    padding: 15px 20px;
     align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
 .topbar__logo {
     width: 40px;
+    height: 40px;
     border-radius: 50%;
+    background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .topbar__title {
     flex-grow: 1;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
+/* ===== CONTENEDOR DE CONTENIDO ===== */
+.content-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ===== BARRA LATERAL ===== */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #2c3e50, #4a6491);
+    color: white;
+    padding: 20px 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.5);
+}
+
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left-color: white;
+}
+
+.menu-item span {
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.main-content {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+/* ===== BOTONES ===== */
 .button {
-    border: solid 1px gray;
+    border: solid 1px #d3d3d3;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px 15px;
     text-align: center;
     cursor: pointer;
     width: fit-content;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    transition: all 0.3s ease;
+    background-color: #fff;
 }
 
 .button.highlight {
-    background-color: black;
+    background-color: #2c3e50;
     color: white;
+    border-color: #2c3e50;
 }
 
-.ribbon {
-    background-color: #d3d3d3;
-    padding: 20px;
-    display: flex;
-    gap: 40px;
-    margin-bottom: 10px;
+.button:hover {
+    background-color: #f0f0f0;
 }
 
-.ribbon__button {
-    display: flex;
-    flex-flow: column;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding: 7px;
-    min-width: 100px;
-    cursor: pointer;
-    color: black;
+.button.highlight:hover {
+    background-color: #1a2530;
 }
 
-.no-decoration {
-    text-decoration: none;
-}
-
-.ribbon__button:hover {
-    background-color: #a9a8a8;
-}
-
-.ribbon__button__image-wrapper {
-    height: 60px;
-
-    img {
-        max-height: 50px;
-    }
-}
-
-.ribbon__button.active {
-    background-color: white;
-}
-
-main {
-    padding: 0 10px;
-}
-
+/* ===== TOOLBAR ===== */
 .toolbar {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
+/* ===== TABLAS ===== */
 table {
     width: 100%;
     border: solid 1px #d3d3d3;
-    border-collapse: separate;
-    border-radius: 7px;
-    border-spacing: 0;
+    border-collapse: collapse;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
 
-    thead {
-        background-color: #d3d3d3;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
+thead {
+    background-color: #f0f0f0;
 }
 
 th {
     text-align: left;
-    font-weight: normal;
-    font-size: 0.9rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 15px;
+    color: #2c3e50;
+    border-bottom: 2px solid #d3d3d3;
 }
 
-th,
 td {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 15px;
+    border-bottom: solid 1px #eaeaea;
 }
 
-tr {
-    td {
-        border-bottom: solid 1px #d3d3d3;
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* ===== MENÚ DE OPCIONES ===== */
+.options-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.options-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0 8px;
+    color: #555;
+    border-radius: 4px;
+}
+
+.options-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.options-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    min-width: 120px;
+    z-index: 10;
+}
+
+.options-menu:hover .options-dropdown {
+    display: block;
+}
+
+.options-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.options-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.options-dropdown a:hover {
+    background: #f6f6f6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
     }
-}
-
-tr:last-child {
-    td {
-        border-bottom: none;
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
     }
-}
-
-th:first-child,
-td:first-child {
-    padding-left: 10px;
+    
+    .menu {
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .menu-item {
+        padding: 10px 15px;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+        white-space: nowrap;
+    }
+    
+    .menu-item:hover,
+    .menu-item.active {
+        border-left: none;
+        border-bottom-color: white;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
 }
