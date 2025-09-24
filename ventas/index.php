@@ -15,6 +15,7 @@
 
 <body>
     <?php
+<<<<<<< HEAD
         include '../includes/header.php';
 
         mostrarRibbon("ventas");
@@ -26,6 +27,19 @@
         + Agregar venta
     </a>
 </div>
+=======
+    include '../includes/header.php';
+
+    mostrarRibbon("ventas");
+    ?>
+
+    <main>
+        <div class="toolbar">
+            <a href="crear.php" class="button highlight">
+                + Agregar venta
+            </a>
+        </div>
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 
         <table>
             <thead>

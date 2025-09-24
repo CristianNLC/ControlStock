@@ -1,4 +1,5 @@
 /* ===== ESTILOS GENERALES ===== */
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -18,21 +19,43 @@ html {
     display: flex;
     flex-direction: column;
     height: 100vh;
+=======
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    height: 100%;
+}
+
+body {
+    display: block;
+    min-height: 100vh;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 /* ===== TOPBAR ===== */
 .topbar {
     display: flex;
+<<<<<<< HEAD
     gap: 15px;
     padding: 15px 20px;
     align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 100;
+=======
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 .topbar__logo {
     width: 40px;
+<<<<<<< HEAD
     height: 40px;
     border-radius: 50%;
     background-color: #2c3e50;
@@ -42,10 +65,14 @@ html {
     color: white;
     font-weight: bold;
     font-size: 18px;
+=======
+    border-radius: 50%;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 .topbar__title {
     flex-grow: 1;
+<<<<<<< HEAD
     font-size: 1.4rem;
     font-weight: 600;
     color: #2c3e50;
@@ -118,13 +145,23 @@ html {
     padding: 25px;
     overflow-y: auto;
     background-color: #fff;
+=======
+    font-size: 1.2rem;
+    font-weight: 600;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 /* ===== BOTONES ===== */
 .button {
+<<<<<<< HEAD
     border: solid 1px #d3d3d3;
     border-radius: 5px;
     padding: 8px 15px;
+=======
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 8px 12px;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
     text-align: center;
     cursor: pointer;
     width: fit-content;
@@ -132,6 +169,7 @@ html {
     color: #333;
     display: inline-block;
     transition: all 0.3s ease;
+<<<<<<< HEAD
     background-color: #fff;
 }
 
@@ -139,6 +177,14 @@ html {
     background-color: #2c3e50;
     color: white;
     border-color: #2c3e50;
+=======
+}
+
+.button.highlight {
+    background-color: black;
+    color: white;
+    border-color: black;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 .button:hover {
@@ -146,6 +192,7 @@ html {
 }
 
 .button.highlight:hover {
+<<<<<<< HEAD
     background-color: #1a2530;
 }
 
@@ -153,6 +200,71 @@ html {
 .toolbar {
     display: flex;
     margin-bottom: 20px;
+=======
+    background-color: #333;
+}
+
+/* ===== RIBBON/MENÚ ===== */
+.ribbon {
+    background-color: #d3d3d3;
+    padding: 15px 20px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.ribbon__button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 100px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.ribbon__button:hover {
+    background-color: #a9a8a8;
+}
+
+.ribbon__button__image-wrapper {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ribbon__button__image-wrapper img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.ribbon__button.active {
+    background-color: white;
+    font-weight: 600;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    padding: 0 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.toolbar {
+    display: flex;
+    margin-bottom: 15px;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 /* ===== TABLAS ===== */
@@ -160,6 +272,7 @@ table {
     width: 100%;
     border: solid 1px #d3d3d3;
     border-collapse: collapse;
+<<<<<<< HEAD
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -167,11 +280,21 @@ table {
 
 thead {
     background-color: #f0f0f0;
+=======
+    border-radius: 7px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+    background-color: #d3d3d3;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 th {
     text-align: left;
     font-weight: 600;
+<<<<<<< HEAD
     font-size: 0.95rem;
     padding: 15px;
     color: #2c3e50;
@@ -181,14 +304,29 @@ th {
 td {
     padding: 15px;
     border-bottom: solid 1px #eaeaea;
+=======
+    font-size: 0.9rem;
+    padding: 12px 15px;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: solid 1px #d3d3d3;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 tr:last-child td {
     border-bottom: none;
 }
 
+<<<<<<< HEAD
 tr:hover {
     background-color: #f9f9f9;
+=======
+th:first-child,
+td:first-child {
+    padding-left: 15px;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 /* ===== MENÚ DE OPCIONES ===== */
@@ -204,11 +342,14 @@ tr:hover {
     cursor: pointer;
     padding: 0 8px;
     color: #555;
+<<<<<<< HEAD
     border-radius: 4px;
 }
 
 .options-btn:hover {
     background-color: #f0f0f0;
+=======
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 }
 
 .options-dropdown {
@@ -230,7 +371,11 @@ tr:hover {
 
 .options-dropdown a {
     display: block;
+<<<<<<< HEAD
     padding: 10px 15px;
+=======
+    padding: 10px 12px;
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
     color: #333;
     text-decoration: none;
     font-size: 14px;
@@ -245,6 +390,7 @@ tr:hover {
     background: #f6f6f6;
 }
 
+<<<<<<< HEAD
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .content-container {
@@ -279,3 +425,138 @@ tr:hover {
         padding: 15px;
     }
 }
+=======
+/* ===== FORMULARIOS ===== */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #000;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #333;
+}
+
+/* ===== ALERTAS ===== */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .ribbon {
+        gap: 15px;
+        padding: 10px 15px;
+    }
+
+    .ribbon__button {
+        min-width: 80px;
+        padding: 8px;
+    }
+
+    .ribbon__button__image-wrapper {
+        height: 50px;
+    }
+
+    .ribbon__button__image-wrapper img {
+        max-height: 40px;
+        max-width: 40px;
+    }
+
+    main {
+        padding: 0 10px 20px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    th:first-child,
+    td:first-child {
+        padding-left: 10px;
+    }
+}
+
+/* ===== ESTILOS ESPECÍFICOS PARA ESTADOS ===== */
+.text-green {
+    color: green;
+}
+
+.text-red {
+    color: red;
+}
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478

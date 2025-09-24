@@ -11,11 +11,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+<<<<<<< HEAD
         
+=======
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 </head>
 
 <body>
     <?php
+<<<<<<< HEAD
         include '../includes/header.php';
 
         mostrarRibbon(pagina: "/insumos");
@@ -27,6 +31,19 @@
         + Agregar insumo
     </a>
 </div>
+=======
+    include '../includes/header.php';
+
+    mostrarRibbon("insumos");
+    ?>
+
+    <main>
+        <div class="toolbar">
+            <div class="button highlight">
+                + Agregar insumo
+            </div>
+        </div>
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 
         <table>
             <thead>

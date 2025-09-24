@@ -15,6 +15,7 @@
 
 <body>
     <?php
+<<<<<<< HEAD
         include '../includes/header.php';
 
         mostrarRibbon("metodos_pago");
@@ -26,6 +27,19 @@
         + Agregar Metodo de Pago
     </a>
 </div>
+=======
+    include '../includes/header.php';
+
+    mostrarRibbon("metodos_pago");
+    ?>
+
+    <main>
+        <div class="toolbar">
+            <div class="button highlight">
+                + Agregar método de pago
+            </div>
+        </div>
+>>>>>>> a8f64905dd06084c12c8421874007a23922f8478
 
         <table>
             <thead>
